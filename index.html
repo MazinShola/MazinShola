@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Technology | Engineering Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f3f4f6; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(to right, #3b82f6, #8b5cf6, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* --- عودة مقدمة الشعار الذرية (التربل) --- */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #000; z-index: 1000; display: flex; justify-content: center; align-items: center;
+            transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+        }
+        .core {
+            width: 15px; height: 15px; background: #fff; border-radius: 50%;
+            box-shadow: 0 0 20px #3b82f6, 0 0 40px #60a5fa, 0 0 60px #fff;
+            animation: core-pulse 1.5s infinite alternate;
+        }
+        .orbit {
+            position: absolute; border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 50%; animation: rotate linear infinite;
+        }
+        .orbit-1 { width: 60px; height: 60px; animation-duration: 3s; }
+        .orbit-2 { width: 95px; height: 95px; animation-duration: 5s; border-style: dashed; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes core-pulse { from { transform: scale(1); filter: brightness(1); } to { transform: scale(1.4); filter: brightness(1.5); } }
+        
+        .nova-intro-text {
+            margin-top: 100px; font-weight: 200; letter-spacing: 12px; color: #fff;
+            animation: text-fade 2s ease-in-out forwards;
+        }
+        @keyframes text-fade { 0% { opacity: 0; letter-spacing: 20px; } 100% { opacity: 1; letter-spacing: 8px; } }
+        .preloader-hidden { opacity: 0; visibility: hidden; transform: scale(1.1); }
+
+        /* --- تنسيق شريط المشاريع الأفقي --- */
+        .project-scroll {
+            display: flex; overflow-x: auto; gap: 2rem; padding: 2rem 0;
+            scrollbar-width: none; -ms-overflow-style: none;
+        }
+        .project-scroll::-webkit-scrollbar { display: none; }
+        .project-card { min-width: 320px; transition: 0.4s; }
+        .project-card:hover { border-color: #3b82f6; background: rgba(255,255,255,0.06); }
+    </style>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="flex flex-col items-center">
+            <div class="relative flex justify-center items-center">
+                <div class="core"></div>
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+            </div>
+            <div class="nova-intro-text uppercase">Nova <span class="text-blue-500 font-bold">Technology</span></div>
+        </div>
+    </div>
+
+    <nav class="fixed w-full z-50 top-6 px-6">
+        <div class="max-w-6xl mx-auto glass rounded-3xl px-8 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter italic">NOVA <span class="text-blue-500 font-extrabold">TECH</span></div>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-blue-400">الرئيسية</a>
+                <a href="#team" class="hover:text-blue-400">الفريق</a>
+                <a href="#projects" class="hover:text-blue-400">المشاريع</a>
+                <a href="#courses" class="text-blue-400">الدورات</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-56 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">NOVA <span class="text-blue-500 italic">TECH</span></h1>
+            <p class="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                حلول تقنية ذكية وتصميم شبكات متطورة. <br> 
+                <span class="text-white font-medium">نبتكر اليوم لنبني الغد بذكاء واحترافية.</span>
+            </p>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-xs font-bold mb-16 text-blue-500 tracking-[0.5em] uppercase">أبرز عمال الشركة</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass p-8 rounded-[2rem] border-white/5 border hover:border-blue-500/50 transition">
+                    <h3 class="font-bold text-lg">مازن فارس</h3>
+                </div>
+                <div class="glass p-8 rounded-[2rem] border-white/5 border hover:border-blue-500/50 transition">
+                    <h3 class="font-bold text-lg">محمد حيدر</h3>
+                </div>
+                <div class="glass p-8 rounded-[2rem] border-white/5 border hover:border-blue-500/50 transition">
+                    <h3 class="font-bold text-lg">ياسين حكيم</h3>
+                </div>
+                <div class="glass p-8 rounded-[2rem] border-white/5 border hover:border-blue-500/50 transition">
+                    <h3 class="font-bold text-lg">النور رمضان</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 bg-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-10">المشاريع المنجزة</h2>
+            <div class="project-scroll">
+                <div class="glass p-5 rounded-[2.5rem] project-card border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500" class="w-full h-44 object-cover rounded-3xl mb-6">
+                    <h4 class="text-xl font-bold mb-2">تأسيس البنية التحتية</h4>
+                    <p class="text-gray-500 text-sm">تصميم وتنفيذ شبكات الألياف البصرية للمجمعات السكنية.</p>
+                </div>
+                <div class="glass p-5 rounded-[2.5rem] project-card border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=500" class="w-full h-44 object-cover rounded-3xl mb-6">
+                    <h4 class="text-xl font-bold mb-2">أنظمة المراقبة الذكية</h4>
+                    <p class="text-gray-500 text-sm">تركيب أنظمة كاميرات IP مع تقنيات التعرف على الوجوه.</p>
+                </div>
+                <div class="glass p-5 rounded-[2.5rem] project-card border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" class="w-full h-44 object-cover rounded-3xl mb-6">
+                    <h4 class="text-xl font-bold mb-2">تحليل البيانات العلمي</h4>
+                    <p class="text-gray-500 text-sm">معالجة البيانات الضخمة للبحوث العلمية باستخدام SPSS.</p>
+                </div>
+                <div class="glass p-5 rounded-[2.5rem] project-card border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500" class="w-full h-44 object-cover rounded-3xl mb-6">
+                    <h4 class="text-xl font-bold mb-2">الأمن السيبراني</h4>
+                    <p class="text-gray-500 text-sm">تأمين الأنظمة السحابية وحماية البيانات من الاختراقات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto glass p-16 rounded-[3.5rem] border-blue-500/20 border" data-aos="zoom-in">
+            <h2 class="text-4xl font-bold mb-6 italic">Coming Soon <br> <span class="text-blue-500 not-italic uppercase text-2xl">الدورات التدريبية</span></h2>
+            <p class="text-gray-400 text-lg mb-10">قريباً.. انطلاق أقوى الكورسات التعليمية في لغات البرمجة والشبكات مع خبراء Nova.</p>
+            <div class="flex justify-center gap-6">
+                <i class="fab fa-python text-3xl text-gray-600"></i>
+                <i class="fab fa-js text-3xl text-gray-600"></i>
+                <i class="fab fa-java text-3xl text-gray-600"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 border-t border-white/5 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-2xl font-bold italic">NOVA <span class="text-blue-500">TECHNOLOGY</span></div>
+            
+            <div class="flex gap-10">
+                <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-3xl transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-blue-600 text-3xl transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/249XXXXXXXXX" target="_blank" class="text-gray-400 hover:text-green-500 text-3xl transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <p class="text-[9px] text-gray-800 uppercase tracking-widest">© 2025 Nova Tech Team</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            // زمن معقول للمقدمة (2.5 ثانية) لدمج جمال الحركة وسرعة الفتح
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('preloader-hidden');
+                AOS.init({ duration: 1000, once: true });
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
